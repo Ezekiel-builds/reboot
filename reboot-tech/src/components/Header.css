@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.header__logo {
+    font-size: 20px;
+    font-family: var(--header_font);
+    font-weight: 600;
+    color: var(--color_dark);
+}
+
+.nav__links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color_dark);
+    font-weight: 500;
+    transition: color 0.4s ease-in;
+}
+
+.nav__link:hover {
+    color: var(--color);
+}
+
+.header__meta {
+    display: flex;
+    gap: 20px;
+}

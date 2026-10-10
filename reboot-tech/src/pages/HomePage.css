@@ -1,0 +1,79 @@
+.main__container {
+    padding: 40px 20px;
+}
+
+.hero {
+    margin: 36px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--hero_bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.hero__left {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero__left-motto {
+    font-size:  clamp(2.3rem, 2vw, 48px);
+    font-weight: 500;
+    color: var(--color_dark);
+}
+
+.hero__left-text {
+    max-width: 520px;
+    color: var(--color_mute);
+    font-size: clamp(1.2rem 2vw 16px);
+}
+
+.hero__left-btn {
+    max-width: 150px;
+    text-decoration: none;
+    background-color: var(--color);
+    padding: 12px 32px;
+    color: var(--color_white);
+    border-radius: 8px;
+}
+
+/* Hero Right */
+.hero__right {
+    max-width: 520px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.hero__right img {
+    width: 100%;
+    display: block;
+    background-color: var(--main_bg);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.categories {
+    margin: 32px 0;
+}
+
+.categories__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.category__card {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 32px;
+    cursor: pointer;
+}

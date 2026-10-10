@@ -1,5 +1,42 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Icons */
-@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css')
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+:root {
+    --main_bg: #FFFFFF;
+    --bg_mute: #F9FAFB;
+    --hero_bg: #FAFAFA;
+
+    /* Text colors */
+    --color: #F47521;
+    --color_dark: #1A1A1A;
+    --color_mute: #4B5563;
+    --color_white: #FFFFFF;
+
+    /* Borders */
+    --card_border: rgba(229, 231, 235, 0.8);
+    --border: #E5E7EB;
+
+    /* Fonts */
+    --header_font: 'Plus Jakarta Sans';
+    --body_font: "Lora", serif;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--header_font);
+}
+
+body {
+    background-color: var(--main_bg);
+    font-family: var(--body_font);
+}

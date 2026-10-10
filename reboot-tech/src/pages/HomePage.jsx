@@ -1,5 +1,7 @@
-import Header from "../components/Header";
-import Products from "../components/Products";
+import Header from '../components/Header';
+import Products from '../components/Products';
+import HeroImg from '../assets/hero.png';
+import './HomePage.css';
 
 function HomePage() {
     return (
@@ -23,9 +25,10 @@ function HomePage() {
                     </div>
 
                     <div className="hero__right">
-                        <img src="#" 
+                        <img src={HeroImg} 
                         className="hero__right-image" 
                         alt="product image" 
+                      
                         />
                     </div>
                 </section>
@@ -67,6 +70,10 @@ function HomePage() {
                 </section>
 
                 <section className="products">
+                    <h3 className="products__header">
+                        Our Products
+                    </h3>
+                    
                     <Products />
                 </section>
             </main>
