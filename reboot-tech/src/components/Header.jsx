@@ -13,7 +13,8 @@ function Header() {
             </nav>
 
             <div className="header__meta">
-                // Icons
+                <i className="fi fi-rr-user"></i>
+                <i className="fi fi-rr-shopping-bag"></i>
             </div>
         </header>
     )
