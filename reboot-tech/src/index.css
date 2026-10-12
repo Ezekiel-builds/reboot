@@ -9,20 +9,25 @@
     --main_bg: #FFFFFF;
     --bg_mute: #F9FAFB;
     --hero_bg: #FAFAFA;
+    --chat_icon-bg: #25D366;
 
     /* Text colors */
     --color: #F47521;
     --color_dark: #1A1A1A;
     --color_mute: #4B5563;
     --color_white: #FFFFFF;
+    --color_chat: #374151;
 
     /* Borders */
     --card_border: rgba(229, 231, 235, 0.8);
     --border: #E5E7EB;
+    --border_alt: #F3F4F6;
 
     /* Fonts */
     --header_font: 'Plus Jakarta Sans';
     --body_font: "Lora", serif;
+
+    
 
 }
 

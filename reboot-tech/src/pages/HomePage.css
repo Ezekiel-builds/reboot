@@ -29,7 +29,7 @@
 .hero__left-text {
     max-width: 520px;
     color: var(--color_mute);
-    font-size: clamp(1.2rem 2vw 16px);
+    font-size: clamp(0.8rem, 2vw, 16px);
 }
 
 .hero__left-btn {
@@ -76,4 +76,30 @@
     border-radius: 12px;
     padding: 24px 32px;
     cursor: pointer;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.products__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.products__header {
+    font-size: clamp(1.6rem, 2vw, 28px);
+    font-weight: 500;
+    color: var(--color_dark);
+    margin-top: 32px;
+}
+
+.products__header-line {
+    width: 36px;
+    height: 4px;
+    border-radius: 999px;
+    background-color: var(--color);
 }

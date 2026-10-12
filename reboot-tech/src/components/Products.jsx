@@ -6,6 +6,7 @@ import OriamoWatch from '../assets/Product5.jpg';
 import Samsung from '../assets/Product6.jpg';
 import SamsungWatch from '../assets/Product7.jpg';
 import SonyHeadphone from '../assets/Product8.webp';
+import './Product.css';
 
  const products = [
   {
@@ -92,27 +93,34 @@ import SonyHeadphone from '../assets/Product8.webp';
 
 function Products() {
     return (
-       <>
-        {products.map((product) => (
-            <div className="product__card" key={product.id}>
-                <div className="product__image-box">
-                    <img 
-                    src={product.image_url} 
-                    className="product__image" 
-                    alt={product.name} 
-                    />
-                </div>
+       <div className="product__cards">
+          {products.map((product) => (
+              <div className="product__card" key={product.id}>
+                  <div className="product__image-box">
+                      <img 
+                      src={product.image_url} 
+                      className="product__image" 
+                      alt={product.name} 
+                      />
+                  </div>
 
-                <h4 className="product__name">
-                    {product.name}
-                </h4>
+                  <div className="product__card-meta">
+                    <h4 className="product__name">
+                        {product.name}
+                    </h4>
 
-                <p className="product__price">
-                    ₦{product.price.toLocaleString()}
-                </p>
-            </div>
-        ))}
-       </>
+                    <p className="product__price">
+                        ₦{product.price.toLocaleString()}
+                    </p>
+                  </div>
+
+                  <div className="product__card-bottom">
+                    <a href="#" className="message__link"><i class="fi fi-rr-beacon chat__icon"></i> Ask about this</a>
+                    <a  href="#" className="add__to-cart--link"><i class="fi fi-rr-shopping-cart cart__icon"></i></a>
+                  </div> 
+              </div>
+          ))}
+       </div>
     )
 }
 

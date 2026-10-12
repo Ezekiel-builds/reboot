@@ -70,9 +70,12 @@ function HomePage() {
                 </section>
 
                 <section className="products">
-                    <h3 className="products__header">
-                        Our Products
-                    </h3>
+                    <div className="products__heading">
+                        <h3 className="products__header">
+                            Our Products
+                        </h3>
+                        <span className="products__header-line"></span>
+                    </div>
                     
                     <Products />
                 </section>
