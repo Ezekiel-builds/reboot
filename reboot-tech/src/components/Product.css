@@ -63,6 +63,9 @@
 
 .message__link {
     color: var(--color_chat);
+    display:  inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .chat__icon {

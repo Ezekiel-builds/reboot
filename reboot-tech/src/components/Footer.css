@@ -1,0 +1,73 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color_dark);
+    padding: 40px 32px;
+    color: var(--color_white);
+}
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header__logo-text {
+    font-size: 20px;
+    color: var(--color_mute);
+}
+
+.message__button-btn {
+    text-decoration: none;
+    color: var(--chat_icon-bg);
+    background-color: rgba(37, 211, 102, 0.1);
+    padding: 8px 16px;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-radius: 8px;
+}
+
+.footer__left-text {
+    max-width: 520px;
+    color: #9CA3AF;
+}
+
+.footer__center {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__center-header,
+.footer__right-header {
+    color: var(--color_white);
+    font-weight: 600;
+}
+
+.footer__quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__quick-link {
+    text-decoration: none;
+    color: var(--color_mute);
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__right-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__tel,
+.footer__support,
+.footer__address {
+   color: var(--color_mute);
+}

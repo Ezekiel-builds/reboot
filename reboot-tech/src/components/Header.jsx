@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { cartContext } from './CartProvider';
 import './Header.css';
 
 function Header() {
+    const { cartItems } = useContext(cartContext)
     return (
         <header className="header">
             <div className="header__logo">
@@ -17,6 +20,7 @@ function Header() {
             <div className="header__meta">
                 <i className="fi fi-rr-user"></i>
                 <i className="fi fi-rr-shopping-bag"></i>
+                <p>{cartItems.length}</p>
             </div>
         </header>
     )

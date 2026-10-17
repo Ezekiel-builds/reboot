@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { cartContext } from './CartProvider';
 import Hp from '../assets/Product1.jpg';
 import Infinix from '../assets/Product2.jpg';
 import MackbookM2 from '../assets/Product3.jpg';
@@ -92,6 +94,7 @@ import './Product.css';
 ];
 
 function Products() {
+  const { cartItems, addToCart } = useContext(cartContext);
     return (
        <div className="product__cards">
           {products.map((product) => (
@@ -112,11 +115,12 @@ function Products() {
                     <p className="product__price">
                         ₦{product.price.toLocaleString()}
                     </p>
+
                   </div>
 
                   <div className="product__card-bottom">
-                    <a href="#" className="message__link"><i class="fi fi-rr-beacon chat__icon"></i> Ask about this</a>
-                    <a  href="#" className="add__to-cart--link"><i class="fi fi-rr-shopping-cart cart__icon"></i></a>
+                    <a href="#" className="message__link"><i className="fi fi-rr-messages chat__icon"></i>Ask about this</a>
+                    <button className="add__to-cart--link" onClick={() => addToCart(product)}><i className="fi fi-rr-shopping-cart cart__icon"></i></button>
                   </div> 
               </div>
           ))}

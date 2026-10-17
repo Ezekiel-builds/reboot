@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Products from '../components/Products';
 import HeroImg from '../assets/hero.png';
 import './HomePage.css';
@@ -80,6 +81,8 @@ function HomePage() {
                     <Products />
                 </section>
             </main>
+
+            <Footer />
         </>
     )
 }
