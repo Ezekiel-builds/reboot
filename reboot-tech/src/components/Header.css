@@ -30,6 +30,24 @@
 }
 
 .header__meta {
+    position: relative;
     display: flex;
     gap: 20px;
+}
+
+.cart__items {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 42px;
+    bottom: 8px;
+    margin: 4px;
+    font-size: clamp(0.8rem, 2vw, 12px);
+    background-color: var(--color);
+    color: var(--color_white);
+    padding: 10px;
+    border-radius: 50%;
 }

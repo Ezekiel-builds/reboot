@@ -20,7 +20,7 @@ function Header() {
             <div className="header__meta">
                 <i className="fi fi-rr-user"></i>
                 <i className="fi fi-rr-shopping-bag"></i>
-                <p>{cartItems.length}</p>
+                <span className="cart__items">{cartItems.length}</span>
             </div>
         </header>
     )
