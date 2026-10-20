@@ -1,15 +1,10 @@
-import { useContext } from 'react';
+import { supabase } from '../SupabaseClient';
+import { useContext, useEffect, useState } from 'react';
 import { cartContext } from './CartProvider';
-import Hp from '../assets/Product1.jpg';
-import Infinix from '../assets/Product2.jpg';
-import MackbookM2 from '../assets/Product3.jpg';
-import OriamoEarpods from '../assets/Product4.webp';
-import OriamoWatch from '../assets/Product5.jpg';
-import Samsung from '../assets/Product6.jpg';
-import SamsungWatch from '../assets/Product7.jpg';
-import SonyHeadphone from '../assets/Product8.webp';
+
 import './Product.css';
 
+/* 
  const products = [
   {
     id: 1,
@@ -92,11 +87,35 @@ import './Product.css';
     is_featured: false,
   },
 ];
+ */
 
 function Products() {
   const { cartItems, addToCart } = useContext(cartContext);
+  const [products, setProducts] = useState([]);
+const [error, setError] = useState(null);
+
+useEffect(() => {
+  async function fetchProducts() {
+    const { data, error } = await supabase
+      .from("products")
+      .select("*")
+
+      if(error) {
+        setError(error.message)
+      }
+      if(data) {
+        setProducts(data)
+      }
+  }
+
+  fetchProducts()
+}, []);
+
     return (
        <div className="product__cards">
+       {/*  <h4 className="error__message">
+          {error}
+        </h4> */}
           {products.map((product) => (
               <div className="product__card" key={product.id}>
                   <div className="product__image-box">
