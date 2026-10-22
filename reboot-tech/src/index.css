@@ -7,6 +7,7 @@
 
 :root {
     --main_bg: #FFFFFF;
+    --main__bg-alt: #F7F9FD;
     --bg_mute: #F9FAFB;
     --hero_bg: #FAFAFA;
     --chat_icon-bg: #25D366;
@@ -17,11 +18,13 @@
     --color_mute: #4B5563;
     --color_white: #FFFFFF;
     --color_chat: #374151;
+    --color_muted: #5F5E5E;
 
     /* Borders */
     --card_border: rgba(229, 231, 235, 0.8);
     --border: #E5E7EB;
     --border_alt: #F3F4F6;
+    --border_color: #E6E8EC;
 
     /* Fonts */
     --header_font: 'Plus Jakarta Sans';
@@ -42,6 +45,6 @@ h1, h2, h3, h4 {
 }
 
 body {
-    background-color: var(--main_bg);
+    background-color: var(--main__bg-alt);
     font-family: var(--body_font);
 }

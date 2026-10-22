@@ -1,4 +1,5 @@
 import { supabase } from '../SupabaseClient';
+import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { cartContext } from './CartProvider';
 
@@ -127,9 +128,9 @@ useEffect(() => {
                   </div>
 
                   <div className="product__card-meta">
-                    <h4 className="product__name">
+                    <Link to={`/products/${product.id}`} className="product__name">
                         {product.name}
-                    </h4>
+                    </Link>
 
                     <p className="product__price">
                         ₦{product.price.toLocaleString()}

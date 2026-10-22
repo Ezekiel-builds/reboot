@@ -4,12 +4,17 @@
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid var(--border);
+    background-color: var(--main_bg);
 }
 
 .header__logo {
     font-size: 20px;
     font-family: var(--header_font);
     font-weight: 600;
+}
+
+.header__logo-text {
+    text-decoration: none;
     color: var(--color_dark);
 }
 
