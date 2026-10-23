@@ -10,12 +10,18 @@ function CartProvider({ children }) {
   });
   
 
-  function addToCart(product) {
+  function addToCart(product, quatity, totalPrice) {
     setCartItems((currentItems) => [
         ...currentItems,
         product
     ])
     console.log(product)
+  }
+
+  function removeFromCart(productId) {
+    setCartItems((currentItems) =>
+      currentItems.filter((item) => item.id !== productId)
+    );
   }
 
   useEffect(() => {
@@ -24,7 +30,7 @@ function CartProvider({ children }) {
 
     return (
         <>
-            <cartContext.Provider value={{cartItems, addToCart}}>
+            <cartContext.Provider value={{cartItems, addToCart, removeFromCart}}>
                 {children}
             </cartContext.Provider>
         </>
