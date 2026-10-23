@@ -8,6 +8,7 @@ function CartProvider({ children }) {
 
     return savedItems ? JSON.parse(savedItems): [];
   });
+  
 
   function addToCart(product) {
     setCartItems((currentItems) => [

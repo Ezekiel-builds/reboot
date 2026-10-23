@@ -40,6 +40,11 @@
     gap: 20px;
 }
 
+.cart {
+    text-decoration: none;
+    color: var(--color_dark);
+}
+
 .cart__items {
     width: 16px;
     height: 16px;

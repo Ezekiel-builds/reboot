@@ -20,7 +20,9 @@ function Header() {
 
             <div className="header__meta">
                 <i className="fi fi-rr-user"></i>
-                <i className="fi fi-rr-shopping-bag"></i>
+                <Link to="/cart" className="cart">
+                    <i className="fi fi-rr-shopping-bag"></i>
+                </Link>
                 <span className="cart__items">{cartItems.length}</span>
             </div>
         </header>

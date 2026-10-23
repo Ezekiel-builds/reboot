@@ -13,6 +13,7 @@ function ProductDetails() {
     const [loading, setLoading] = useState(true);
     const [quantity, setQuantity] = useState(1);
     const { addToCart } = useContext(cartContext);
+    const [isClicked, setisClicked] = useState(false)
 
     function increaseQuantity() {
         setQuantity(currentQuantity => currentQuantity + 1);
@@ -54,6 +55,10 @@ function ProductDetails() {
         return <p>{error}</p>;
     }
 
+    if(!product) {
+        return <p>Product not found.</p>
+    }
+
         const totalPrice = Number(product.price) * quantity;
 
     return (
@@ -83,20 +88,23 @@ function ProductDetails() {
                             QUANTITY
                         </span>
 
-                        <div className="quantity__meta">
-                            <div className="quantity__count">
-                                <button className="quantitiy__decrease" onClick={decreaseQuantity}>
+                        <div className={styles["quantity__meta"]}>
+                            <div className={styles["quantity__count"]}>
+                                <button
+                                    className={styles["quantity__decrease"]}
+                                    onClick={decreaseQuantity}
+                                >
                                     <i className="fi fi-rr-minus-small decrease__icon"></i>
                                 </button>
 
-                                <span className="quantity__count-value">
+                                <span className={styles["quantity__count-value"]}>
                                     {quantity}
                                 </span>
 
                                 <button 
-                                className="quantity__increase" 
-                                onClick={increaseQuantity}
-                                disabled={quantity >= 5}
+                                    className={styles["quantity__increase"]}
+                                    onClick={increaseQuantity}
+                                    disabled={quantity >= 5}
                                 >
                                     <i className="fi fi-rr-plus-small increase__icon"></i>
                                 </button>
@@ -104,11 +112,20 @@ function ProductDetails() {
                         </div>
                     </div>
 
-                  <button className="product__addToCart-btn" onClick={() => addToCart({...product, quantity})}>
-                        <i className="fi fi-rr-shopping-cart cart__icon"></i> Add to Cart
+                  <button className={styles["product__addToCart-btn"]} onClick={() => {
+                    addToCart({...product, quantity, totalPrice});
+                    setisClicked(true)
+                    }}>
+                       <i className="fi fi-rr-shopping-cart cart__icon"></i> { isClicked ? "Added to Cart": "Add to Cart"}
                   </button>
 
-                  <p> ₦{totalPrice.toLocaleString()}</p>
+
+                  <div className={styles["total__amount"]}>
+                       <span className={styles["total__amount-label"]}>
+                         Total amount:
+                       </span>
+                      <p className={styles["total__amount-value"]}> ₦{totalPrice.toLocaleString()}</p>
+                  </div>      
                 </div>
             </div>
         </div>
