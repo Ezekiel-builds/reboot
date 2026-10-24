@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import { useContext } from "react";
 import { cartContext } from "../components/CartProvider";
@@ -6,7 +7,12 @@ import './CartPage.css';
 function CartPage() {
     const { cartItems, removeFromCart } = useContext(cartContext);
     const products = cartItems;
-    console.log(products)
+    console.log(products);
+    const itemsTotal = cartItems.reduce(
+    (total, item) =>
+        total + Number(item.price) * item.quantity,
+    0
+);
     return (
         <div className="cart">
             <Header />
@@ -52,6 +58,32 @@ function CartPage() {
                   
                 )
             })}
+
+             <div className="cart__bottom">
+                    <div className="cart__bottom-total">
+                        <span className="cart__bottom-subtotal">
+                            Subtotal
+                        </span>
+
+                        <p className="cart__total-price">
+                            ₦{itemsTotal.toLocaleString()}
+                        </p>
+                    </div>
+
+                    <div className="cart__bottom-delivery">
+                        <span className="cart__bottom-delivery--text">
+                            Delivery
+                        </span>
+
+                        <p>Calculated at checkout</p>
+                    </div>
+
+                    <div className="order__btn-container">
+                         <Link to={(e) => e.preventDefault()} className="order__btn">
+                             Place Order & Pay
+                         </Link> 
+                    </div>     
+            </div>
         </div>
     )
 }

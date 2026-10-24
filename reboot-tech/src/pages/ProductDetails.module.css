@@ -115,7 +115,7 @@
 
 .total__amount-label {
     color: var(--color_muted);
-    font-size: clamp(0.8rem, 2vw, 16px)
+    font-size: clamp(0.8rem, 2vw, 16px);
 }
 
 .total__amount-value {

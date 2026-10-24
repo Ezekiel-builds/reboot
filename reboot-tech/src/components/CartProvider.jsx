@@ -10,7 +10,7 @@ function CartProvider({ children }) {
   });
   
 
-  function addToCart(product, quatity, totalPrice) {
+  function addToCart(product) {
     setCartItems((currentItems) => [
         ...currentItems,
         product
