@@ -65,12 +65,12 @@ function ProductDetails() {
         <div className="product__container">
             <Header />
             
-            <div className={styles["product__box"]}>
-                <div className={styles["product__box-left"]}>
+            <div className={`${styles["product__box"]} responsive-product-layout`}>
+                <div className={`${styles["product__box-left"]} responsive-product-image`}>
                     <img src={product.image_url} alt="Product image" />
                 </div>
 
-                <div className={styles["product__box-right"]}>
+                <div className={`${styles["product__box-right"]} responsive-product-details`}>
                     <h4 className={styles["product__name"]}>
                         {product.name}
                     </h4>
