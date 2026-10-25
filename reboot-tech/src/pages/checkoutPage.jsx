@@ -1,6 +1,57 @@
+import { supabase } from '../SupabaseClient';
+import { useState } from 'react';
 import './CheckoutPage.css';
 
+const nigerianStates = [
+    'Abia',
+    'Adamawa',
+    'Akwa Ibom',
+    'Anambra',
+    'Bauchi',
+    'Bayelsa',
+    'Benue',
+    'Borno',
+    'Cross River',
+    'Delta',
+    'Ebonyi',
+    'Edo',
+    'Ekiti',
+    'Enugu',
+    'Federal Capital Territory',
+    'Gombe',
+    'Imo',
+    'Jigawa',
+    'Kaduna',
+    'Kano',
+    'Katsina',
+    'Kebbi',
+    'Kogi',
+    'Kwara',
+    'Lagos',
+    'Nasarawa',
+    'Niger',
+    'Ogun',
+    'Ondo',
+    'Osun',
+    'Oyo',
+    'Plateau',
+    'Rivers',
+    'Sokoto',
+    'Taraba',
+    'Yobe',
+    'Zamfara',
+];
+
 function CheckoutPage() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("");
+    const [state, setState] = useState("");
+    const [deliveryNotes, setDeliveryNotes] = useState("");
+    console.log(name, email, phoneNumber, address, city, state)
+
     return (
         <form className="form__container">
             <h3 className="form__header">
@@ -25,6 +76,8 @@ function CheckoutPage() {
                             className="form__name-input"
                             placeholder="Enter your full name"
                             autoComplete="name"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
                             required
                         />
                     </div>
@@ -41,6 +94,8 @@ function CheckoutPage() {
                             className="form__email-input"
                             placeholder="you@example.com"
                             autoComplete="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                         />
                     </div>
@@ -57,6 +112,8 @@ function CheckoutPage() {
                             className="form__number-input"
                             placeholder="08012345678"
                             autoComplete="tel"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
                             required
                         />
                     </div>
@@ -79,6 +136,8 @@ function CheckoutPage() {
                             className="form__address-input"
                             placeholder="House number and street name"
                             autoComplete="street-address"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
                             required
                         />
                     </div>
@@ -94,6 +153,8 @@ function CheckoutPage() {
                             type="text"
                             className="form__city-input"
                             placeholder="Enter your city or LGA"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
                             required
                         />
                     </div>
@@ -103,15 +164,24 @@ function CheckoutPage() {
                             State*
                         </label>
 
-                        <input
+                        <select
                             id="state"
                             name="state"
-                            type="text"
                             className="form__state-input"
-                            placeholder="Enter your state"
+                            value={state}
+                            onChange={(e) => setState(e.target.value)}
                             autoComplete="address-level1"
                             required
-                        />
+                        >
+                            <option value="" disabled>
+                                Select your state
+                            </option>
+                            {nigerianStates.map((nigerianState) => (
+                                <option key={nigerianState} value={nigerianState}>
+                                    {nigerianState}
+                                </option>
+                            ))}
+                        </select>
                     </div>
 
                     <div className="form__input">
@@ -125,6 +195,8 @@ function CheckoutPage() {
                             className="form__notes-input"
                             placeholder="Any directions to help us find you?"
                             rows="3"
+                            value={deliveryNotes}
+                            onChange={(e) => setDeliveryNotes(e.target.value)}
                         />
                     </div>
                 </div>

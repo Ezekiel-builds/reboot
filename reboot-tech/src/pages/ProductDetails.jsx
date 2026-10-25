@@ -114,7 +114,7 @@ function ProductDetails() {
 
                   <button className={styles["product__addToCart-btn"]} onClick={() => {
                     addToCart({...product, quantity, totalPrice});
-                    setisClicked(true)
+                    disabled=setisClicked(true)
                     }}>
                        <i className="fi fi-rr-shopping-cart cart__icon"></i> { isClicked ? "Added to Cart": "Add to Cart"}
                   </button>
