@@ -79,7 +79,7 @@ function CartPage() {
                     </div>
 
                     <div className="order__btn-container">
-                         <Link to={(e) => e.preventDefault()} className="order__btn">
+                         <Link to="/checkout" className="order__btn">
                              Place Order & Pay
                          </Link> 
                     </div>     

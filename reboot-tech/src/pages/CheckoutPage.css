@@ -1,0 +1,190 @@
+
+/* ===== Checkout Page ===== */
+
+.form__container {
+    width: min(100% - 32px, 650px);
+    margin: 50px auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    box-sizing: border-box;
+}
+
+.form__container *,
+.form__container *::before,
+.form__container *::after {
+    box-sizing: border-box;
+}
+
+/* ===== Heading ===== */
+
+.form__header {
+    margin: 0 0 28px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    color: #1c1c1c;
+}
+
+/* ===== Form Sections ===== */
+
+.form__box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form__top-box,
+.form__bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form__box-eyebrow,
+.form__bottom-eyebrow {
+    display: block;
+    margin-bottom: 2px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333333;
+}
+
+/* ===== Input Fields ===== */
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.form__name-input,
+.form__email-input,
+.form__number-input,
+.form__address-input,
+.form__city-input,
+.form__state-input,
+.form__notes-input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form__name-input,
+.form__email-input,
+.form__number-input,
+.form__address-input,
+.form__city-input,
+.form__state-input {
+    min-height: 46px;
+}
+
+.form__notes-input {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form__name-input::placeholder,
+.form__email-input::placeholder,
+.form__number-input::placeholder,
+.form__address-input::placeholder,
+.form__city-input::placeholder,
+.form__state-input::placeholder,
+.form__notes-input::placeholder {
+    color: #999999;
+}
+
+/* Highlight the field when the customer focuses on it */
+
+.form__name-input:focus,
+.form__email-input:focus,
+.form__number-input:focus,
+.form__address-input:focus,
+.form__city-input:focus,
+.form__state-input:focus,
+.form__notes-input:focus {
+    border-color: #ff7900;
+    box-shadow: 0 0 0 3px rgba(255, 121, 0, 0.12);
+}
+
+/* ===== Submit Button ===== */
+
+.form__submit {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 30px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff7900;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form__submit:hover {
+    background-color: #e66d00;
+}
+
+.form__submit:active {
+    transform: scale(0.99);
+}
+
+.form__submit:focus-visible {
+    outline: 3px solid rgba(255, 121, 0, 0.35);
+    outline-offset: 3px;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 600px) {
+    .form__container {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+        padding: 22px 18px;
+        border-radius: 12px;
+    }
+
+    .form__header {
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+
+    .form__box {
+        gap: 26px;
+    }
+
+    .form__top-box,
+    .form__bottom-box {
+        gap: 16px;
+    }
+
+    .form__submit {
+        margin-top: 24px;
+    }
+}
