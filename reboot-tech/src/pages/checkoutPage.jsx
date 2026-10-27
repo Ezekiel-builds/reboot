@@ -66,7 +66,6 @@ function CheckoutPage() {
         state: state,
         delivery_notes: deliveryNotes,
       })
-      .select();
 
     if (error) {
       console.error("Failed to save order:", error.message);
